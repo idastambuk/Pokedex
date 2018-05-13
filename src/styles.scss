@@ -1,1 +1,143 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700');
+
+html,body{
+    height: 100%
+}
+body {
+    font-family: 'Arvo', serif;
+    background-color: #bfd8d2;
+}
+//Nav buttons
+
+button {
+    margin-top: 50px;
+	-moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border: transparent;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+    font-size:15px;
+    font-weight: 700;
+    padding: 10px 20px;
+    text-decoration:none;
+    width: 180px;
+    &.button-list {
+        background-color:#df744a;
+        &:hover {
+            background-color:#ffc847;
+        }
+        &:active {
+            position:relative;
+            top:1px;
+        }
+    }
+    &.button-my {
+        margin-top: 20px;
+        background-color:#dcb239;
+        &:hover {
+            background-color:#df744a;
+        }
+        &:active {
+            position:relative;
+            top:1px;
+        }
+    }
+    &.move-up {
+        position: relative;
+        bottom: 25px;
+    }
+   
+}
+
+// Loading animation
+
+.spinner {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    
+    -webkit-animation: sk-rotate 2.0s infinite linear;
+    animation: sk-rotate 2.0s infinite linear;
+  }
+  
+  .dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: rgba(255,255,255, .8);
+    border-radius: 100%;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+  @keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+
+//Styling pokemon cards
+
+.list-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 20px;
+    .pokemon-element {
+        height: 125px;
+        width:45%;
+        background-color:rgba(255,255,255, .8);
+        color: black;
+        border-radius: 12%;
+        overflow:hidden;
+        text-transform: uppercase;
+        margin-top: 15px;
+        text-align: center;
+        &:nth-child(even){
+            margin-left: 5%;
+        }
+        img {
+            padding: 0 5px;
+        }
+        a {
+            cursor: pointer;
+            font-size:13px;
+            font-weight: 700;
+            padding-bottom: 5px
+        }
+    }
+}
+
+//Pagination
+
+.wrapper {
+    min-height: 100%;
+    min-height: 100%;
+    position:relative;
+}

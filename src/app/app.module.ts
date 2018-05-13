@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { HttpModule } from '@angular/http';
+import { routing } from './app.routing';
+import { RouterModule } from '@angular/router';
+import { PokedexModule } from './pokedex/pokedex.module';
+import { PaginationComponent } from './pagination/pagination.component';
 
 
 @NgModule({
@@ -10,9 +15,14 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,   
+    HttpModule,
+    routing,
+    RouterModule,
+    PokedexModule
   ],
-  providers: [],
+  entryComponents: [PaginationComponent],
+  providers: [PaginationComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

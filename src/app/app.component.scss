@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    img {
+        height: 30px;
+        width: auto;
+        padding-right: 15px;
+    }
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <div class="spinner" *ngIf="loading">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+    </div>
+    <div class="list-block" *ngIf="!loading">
+        <div *ngFor="let p of pokemonList" class="pokemon-element">
+            <img [src]="p.imgUrl" (click)="onViewSingle(p.id)">
+            <a (click)="onViewSingle(p.id)">{{p.name}}</a>
+        </div>
+    </div>
+    <app-pagination *ngIf="!loading" [offset]="offset" [limit]="limit" [size]="size" (pageChange)="onPageChange($event)"></app-pagination>
+</div>
