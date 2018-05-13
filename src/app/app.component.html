@@ -1,6 +1,6 @@
 <header>
   <img src="../assets/img/Pokeball.png">
-  <h1 routerLink="/">Pokedex</h1>
+  <h1 routerLink="/">Pokédex</h1>
 </header>
 <div class="buttons">
   <a *ngIf="router.url == '/' || router.url =='/pokedex/my-pokemon'" routerLink="/pokedex/list"><button class="button-navigate button-list" [ngClass]="{'move-up': router.url =='/pokedex/my-pokemon'}" >Browse Pokemon</button></a>

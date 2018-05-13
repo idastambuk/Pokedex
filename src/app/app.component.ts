@@ -10,5 +10,5 @@ export class AppComponent {
   constructor(
     private router: Router
   ) {}
-  title = 'Pokedex';
+  title = 'Pokédex';
 }
